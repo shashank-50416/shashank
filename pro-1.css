@@ -1,0 +1,580 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    padding: 0;
+   
+}
+html{
+    scroll-behavior: smooth;
+}
+/* Navbar Styling for Blending */
+.navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: transparent; /* Makes the navbar transparent */
+    border-bottom: none;
+    padding: 10px 20px;
+}
+/* Default Navbar Color */
+.navbar {
+    background-color: transparent;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Navbar Color When Scrolled */
+.navbar.scrolled {
+    background-color: #2d6a4f; /* Change this to your preferred color */
+}
+
+
+/* Navbar Link Styling */
+.navbar-nav .nav-link {
+    color: #1cbf45;
+    font-size: 16px;
+    padding: 8px 15px;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #00aaff;
+}
+
+/* Dropdown Menu Styling */
+.nav-item:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker background for visibility */
+    border: none;
+    border-radius: 8px;
+}
+
+/* Dropdown Item Styling */
+.dropdown-item {
+    color: #ffffff;
+}
+
+.dropdown-item:hover {
+    background-color: #00aaff;
+    color: #e41212;
+}
+/* Styling for the 'Get in Touch' button */
+.btn-get-in-touch {
+    background-color: #28a745; /* Green background color */
+    color: white; /* White text color */
+    padding: 12px 20px; /* Add some padding */
+    font-size: 24px; /* Adjust font size */
+    font-weight: bold;
+    border: none; /* Remove the default border */
+    border-radius: 50px; /* Rounded corners (pill shape) */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Optional shadow for a 3D effect */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for the button */
+.btn-get-in-touch:hover {
+    background-color: #218838; /* Darker green when hovered */
+    transform: translateY(-3px); /* Slightly lift the button on hover */
+}
+
+/* Focus effect for the button */
+.btn-get-in-touch:focus {
+    outline: none; /* Remove default outline on focus */
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.5); /* Add a green focus shadow */
+}
+
+/* Carousel Image Styling */
+.carousel-item img {
+    object-fit: cover;
+    height: 700px;
+}
+
+/* Mobile View Navbar */
+@media (max-width: 992px) {
+    .navbar {
+        background-color: rgba(0, 0, 0, 0.8); /* Slightly darker on mobile for contrast */
+    }
+}
+.po23{
+    background-color: #9bac9f;
+}
+/* Container to position images relative to each other */
+.image-container {
+    padding: 5%;
+    position: relative; /* Enables absolute positioning for child elements */
+    display: inline-block; /* Makes sure images are inline */
+}
+
+/* Styling for the first image */
+.image-1 {
+    border-radius: 10px;
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Styling for the second image (to overlap) */
+.image-2 {
+    position: absolute; 
+    bottom: 0; 
+    right: 0; 
+    width: 50%; 
+    height: auto; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+/* Optional hover effect for the second image */
+.image-2:hover {
+    transform: scale(1.1); /* Slightly scale up the image on hover */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+.po1{
+    padding: 15px 30px; /* Padding for the capsule shape */
+    border-radius: 50px; /* Capsule shape */
+    display: inline-block; /* To fit the text */
+    margin-top: 50px; /* Margin to separate from the top */
+    text-align: center;
+    width: 100%; /* Full width */
+    max-width: 300px; /* Limit width for a better look */
+}
+
+ .fade-1 {
+    color: rgb(99, 223, 99); /* Ensure h8 has green text color */
+    font-size: 24px; /* Adjust font size */
+    text-align: left;
+    padding: 5%;
+}
+
+.fade-1 {
+    font-weight: bold;
+}
+ .po12{
+    text-align: left;
+    color: #279e41;
+    font-weight: 400px;
+    font-size: 24px;
+    text-transform: uppercase
+}
+.po2{
+    color: rgb(73, 142, 73);
+}
+.marquee-container {
+    background-color: #333;
+    padding: 20px 0;
+    overflow: hidden;
+    position: relative;
+    margin-top: 20px;
+  }
+  
+  /* Common Styles for Marquee Content */
+  .marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 24px;
+    animation-duration: 30s; /* Slower animation speed */
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  .title-font {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+  }
+  
+  .mx-4 {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  .text-white {
+    color: #fff;
+  }
+  
+  .text-uppercase {
+    text-transform: uppercase;
+  }
+  
+  /* Marquee from left to right */
+  .marquee-left .marquee-content {
+    animation-name: marquee-left;
+  }
+  
+  @keyframes marquee-left {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  /* Marquee from right to left */
+  .marquee-right .marquee-content {
+    animation-name: marquee-right;
+  }
+  
+  @keyframes marquee-right {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+/* Container adjustments for the card section */
+.card-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adds horizontal spacing between cards */
+    padding: 20px 0;
+    flex-wrap: no-wrap; /* Allows wrapping for smaller screens */
+}
+
+/* Card Styles */
+.card {
+    height: 100%;
+    background-color: #2ed355;
+    position: relative;
+    width: 18rem;
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Card hover effect */
+.card:hover {
+    transform: translateY(-5px); /* Elevates the card slightly on hover */
+}
+
+/* Card Image */
+.card-img-top {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Hover Overlay */
+.card-body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(139, 71, 71, 0.6); /* Dark overlay */
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Show overlay on hover */
+.card:hover .card-body {
+    opacity: 1;
+}
+
+/* Card Title */
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e16464;
+    text-shadow: 0 2px 4px rgba(138, 49, 49, 0.7);
+}
+
+/* Card Text */
+.card-text {
+    font-size: 1rem;
+    color: #e0e0e0;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Button inside card */
+.btn-primary {
+    background-color: #2d6a4f;
+    border-color: #2d6a4f;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.btn-primary:hover {
+    background-color: #40916c;
+    border-color: #40916c;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* Our Story Section */
+.our-story-section {
+    background-image: url(https://media.istockphoto.com/id/1254474165/photo/tropical-leaves-abstract-green-leaves-texture-nature-background.jpg?s=612x612&w=0&k=20&c=UQ7bV5XZ5Zeg4Lj5uQlg1FOlhZfmZpJirot754UVXWU=);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 50px;
+    height: auto  ;
+    border-top: 4px solid #e5e5e5;
+}
+
+.story-heading h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.story-heading span.dj1 {
+    color: #27ae60;
+    font-style: italic;
+}
+
+.story-text {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.btn-main {
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    background-color: #27ae60;
+    color: #fff;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    border: none;
+}
+
+.btn-main:hover {
+    background-color: #2ecc71;
+    transform: translateY(-3px);
+}
+
+.btn-line {
+    background-color: transparent;
+    border: 2px solid #27ae60;
+    color: #27ae60;
+}
+
+.btn-line:hover {
+    background-color: #27ae60;
+    color: #fff;
+    border-color: #27ae60;
+}
+/* Apply a blur effect */
+.blur-background {
+    height:200%;
+    width: 200%;
+    position: relative;
+    background: rgba(255, 255, 255, 0.8); /* Light background color with some transparency */
+    filter: blur(8px); /* Apply blur effect */
+    transition: filter 0.3s ease-in-out;
+  }
+  
+  .blur-background {
+    filter: blur(0px); /* Remove blur on hover */
+  }
+  
+  /* Optionally, add some padding or margin for spacing */
+  .text1 {
+    padding: 20px;
+  }
+  
+  .rating .d-stars i {
+    color: #ffbc00; /* Star color */
+  }
+  
+  .log25 {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .log24 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  /* Blur effect for the entire counter text */
+.logo25 {
+    filter: blur(3px);
+    transition: filter 1s ease-in-out;
+  }
+  
+  .logo25:hover {
+    filter: blur(0);
+  }
+  
+/* Section styling */
+.price-list {
+  background-image: url(https://img.freepik.com/free-vector/green-leaves-frame_53876-116072.jpg?ga=GA1.1.1980251555.1731046780&semt=ais_hybrid);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+h1 {
+  text-align: center;
+  color: #0bd911;
+}
+.subtitle {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #333;
+}
+.price-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  transition: all 0.3s ease;
+}
+.price-item:last-child {
+  border-bottom: none;
+}
+.price-item:hover {
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+  transform: translateY(-5px);
+}
+.item-name {
+  font-weight: bold;
+  color: #333;
+  transition: color 0.3s ease;
+}
+.item-price {
+  font-weight: bold;
+  color: #007BFF;
+  transition: color 0.3s ease;
+}
+.price-item:hover .item-name,
+.price-item:hover .item-price {
+  color: #fff;
+}
+  /* Footer Styling */
+.footer {
+    background-color: #2a2a2a;
+    color: #f1f1f1;
+    padding: 40px 0;
+  }
+  
+  .footer h5 {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+  
+  .footer p {
+    font-size: 14px;
+    color: #bbbbbb;
+  }
+  
+  .footer .social-icons a {
+    color: #ffffff;
+    font-size: 16px;
+    margin-right: 10px;
+    transition: color 0.3s;
+  }
+  
+  .footer .social-icons a:hover {
+    color: #2a9d8f;
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links a {
+    color: #bbbbbb;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .footer-links a:hover {
+    color: #2a9d8f;
+  }
+  
+  .contact-info {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contact-info li {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #bbbbbb;
+  }
+  
+  .contact-info i {
+    color: #2a9d8f;
+    margin-right: 8px;
+  }
+  
+  /* Newsletter Form Styling */
+  .newsletter-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .newsletter-form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .newsletter-form button {
+    padding: 10px;
+    background-color: #2a9d8f;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+  }
+  
+  .newsletter-form button:hover {
+    background-color: #217a68;
+  }
+  
+  /* Footer Bottom */
+  .footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    font-size: 14px;
+    color: #777;
+  }
+  
