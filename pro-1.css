@@ -144,26 +144,30 @@ html{
     width: 100%; /* Full width */
     max-width: 300px; /* Limit width for a better look */
 }
-
- .fade-1 {
-    color: rgb(99, 223, 99); /* Ensure h8 has green text color */
-    font-size: 24px; /* Adjust font size */
-    text-align: left;
-    padding: 5%;
+.welcome-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
 }
-
+.po12 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #2a5d62;
+  text-align: center;
+}
+.po12 .highlight {
+  color: #f4a261;
+}
+.po2 {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+  text-align: center;
+}
 .fade-1 {
-    font-weight: bold;
-}
- .po12{
-    text-align: left;
-    color: #279e41;
-    font-weight: 400px;
-    font-size: 24px;
-    text-transform: uppercase
-}
-.po2{
-    color: rgb(73, 142, 73);
+  opacity: 0.9;
+  transition: opacity 0.3s ease-in-out;
 }
 .marquee-container {
     background-color: #333;
@@ -425,29 +429,33 @@ html{
   }
   
 /* Section styling */
-.price-list {
+.price-list{
+  
+
   background-image: url(https://img.freepik.com/free-vector/green-leaves-frame_53876-116072.jpg?ga=GA1.1.1980251555.1731046780&semt=ais_hybrid);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px;
+  background-attachment: fixed;
+  /* background-position: center; */
+  width: 100%;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-h1 {
+.price-list h1{
   text-align: center;
   color: #0bd911;
 }
-.subtitle {
+.subtitle{
+ font-weight: 700;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 2em;
   margin-bottom: 20px;
-  color: #333;
+  color: #86c78b;
 }
-.price-item {
+.price-item{
+
   display: flex;
+  width: 50%;
   justify-content: space-between;
   padding: 15px;
   border-bottom: 1px solid #ddd;
@@ -475,6 +483,16 @@ h1 {
 .price-item:hover .item-name,
 .price-item:hover .item-price {
   color: #fff;
+}
+.btn-a11 {
+  background-color: transparent;
+  border: 2px solid #27ae60;
+  color: #27ae60;
+}
+.btn-a11:hover {
+  background-color: #27ae60;
+  color: #fff;
+  border-color: #27ae60;
 }
   /* Footer Styling */
 .footer {
