@@ -429,9 +429,8 @@ html{
   }
   
 /* Section styling */
-.price-list{
-  
-
+.list{
+  height: auto;
   background-image: url(https://img.freepik.com/free-vector/green-leaves-frame_53876-116072.jpg?ga=GA1.1.1980251555.1731046780&semt=ais_hybrid);
   background-repeat: no-repeat;
   background-size: cover;
@@ -441,7 +440,7 @@ html{
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.price-list h1{
+.list h1{
   text-align: center;
   color: #0bd911;
 }
