@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="num12">
+    <input type="number" id="num13">
+
+
+    <button onclick="sum()">+</button>
+    <button onclick="sub()">-</button>
+    <button onclick="div()">/</button>
+    <button onclick="mod()">%</button>
+    <button onclick="multi()">*</button>
+
+    <p id="result">addition result</p>
+
+    <script>
+        function sum() {
+            let X = document.getElementById('num12').value;
+            let y = document.getElementById('num13').value;
+
+            let xnum = parseInt(X);
+            let ynum = parseInt(y);
+
+            const z = xnum+ynum
+
+            document.getElementById('result').innerHTML="Addition result is:"+z
+        }
+
+        function sub() {
+            let X = document.getElementById('num12').value;
+            let y = document.getElementById('num13').value;
+
+            let xnum = parseInt(X);
+            let ynum = parseInt(y);
+
+            const z = xnum-ynum
+
+            document.getElementById('result').innerHTML="substraction result is:"+z
+        }
+
+        function div() {
+            let X = document.getElementById('num12').value;
+            let y = document.getElementById('num13').value;
+
+            let xnum = parseInt(X);
+            let ynum = parseInt(y);
+
+            const z = xnum/ynum
+
+            document.getElementById('result').innerHTML="division result is:"+z
+        }
+
+        function mod() {
+            let X = document.getElementById('num12').value;
+            let y = document.getElementById('num13').value;
+
+            let xnum = parseInt(X);
+            let ynum = parseInt(y);
+
+            const z = xnum%ynum
+
+            document.getElementById('result').innerHTML="Addition result is:"+z
+        }
+
+        function multi() {
+            let X = document.getElementById('num12').value;
+            let y = document.getElementById('num13').value;
+
+            let xnum = parseInt(X);
+            let ynum = parseInt(y);
+
+            const z = xnum*ynum
+
+            document.getElementById('result').innerHTML="multiplication result is:"+z
+        }
+    </script>
+</body>
+</html>
