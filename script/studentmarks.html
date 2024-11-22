@@ -52,14 +52,34 @@
         let validSci = (scimarks >= passingMarks && scimarks <= maxMarks);
         let validSoc = (socmarks >= passingMarks && socmarks <= maxMarks);
 
-        // Display total marks
-        document.getElementById('show').innerHTML = "Total Marks: " + totalMarks;
 
-        // Display result (marks are valid if they are within the range)
-        let allSubjectsValid = validTel && validHin && validEng && validMat && validSci && validSoc;
+                // Display result (marks are valid if they are within the range)
+                let allSubjectsValid = validTel && validHin && validEng && validMat && validSci && validSoc;
 
-        // Output result based on the validity of marks
-        document.getElementById('fass').innerHTML = allSubjectsValid ? "Result: Pass" : "Result: Fail";
+                // Display total marks
+                document.getElementById('show').innerHTML = "Total Marks: " + totalMarks;
+
+                if(allSubjectsValid && (totalMarks>=550)){
+                      alert("congrats,you got A grade")
+                }
+                else if(allSubjectsValid && (totalMarks>=480)){
+                      alert("congrats,you got B grade")
+                }
+                else if(allSubjectsValid && (totalMarks>=300)){
+                      alert("congrats,you got C grade")
+                }
+                else if(allSubjectsValid && (totalMarks>=200)){
+                      alert("congrats,you got D grade")
+                }
+                else{
+                    alert("congrats,you failed better luck next time")
+                }
+
+                // Output result based on the validity of marks
+                document.getElementById('fass').innerHTML = allSubjectsValid ? "Result: Pass" : "Result: Fail";
+
+
+       
     }
 </script>
 
